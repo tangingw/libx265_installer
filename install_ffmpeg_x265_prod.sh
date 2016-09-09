@@ -224,10 +224,10 @@ function testing {
 display_message "Update Ubuntu System"
 update_sys
 
-if [ ! -d ${SOURCE_PREFIX} ];then
+#if [ ! -d ${SOURCE_PREFIX} ];then
 
-	mkdir ${SOURCE_PREFIX}
-fi
+#	mkdir ${SOURCE_PREFIX}
+#fi
 
 
 if [ ${SOURCE_PREFIX} != "/usr" ];then

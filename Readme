@@ -1,0 +1,5 @@
+1. create ${HOME}/ffmpeg_source
+2. copy the test movie file into ${HOME}/ffmpeg_source
+3. edit installer.cfg and change the TEST_VID to your test movie file name
+4. run the installer
+   >bash install_ffmpeg_x265_prod.sh
