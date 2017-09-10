@@ -23,7 +23,7 @@ function update_sys {
 	apt-get install -y libxcb1-dev libxcb-shm0-dev libxcb-xfixes0-dev pkg-config texinfo libtool libva-dev
 	apt-get install -y libbs2b-dev libcaca-dev libopenjpeg-dev librtmp-dev libvpx-dev libvdpau-dev
 	apt-get install -y libwavpack-dev libxvidcore-dev lzma-dev liblzma-dev zlib1g-dev cmake-curses-gui
-	apt-get install -y libx11-dev libxfixes-dev libmp3lame-dev libx264-dev #libx264-146 libx264-dev
+	apt-get install -y libx11-dev libxfixes-dev libmp3lame-dev libx264-dev libbz2-dev libbluray-dev
 
 	sleep 5
 }
@@ -130,6 +130,12 @@ function install_yasm {
 
 	cd yasm
 	./autogen.sh
+
+	./configure
+	make
+	make install
+
+	sleep 5
 }
 
 
@@ -192,7 +198,9 @@ function install_ffmpeg {
 		--enable-libx264 \
  		--enable-libx265 \
  		--enable-nonfree \
-		--enable-version3
+		--enable-version3 \
+		--arch=x86_64 \
+                --enable-yasm
 
 	make
 	make install
