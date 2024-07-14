@@ -53,7 +53,7 @@ function install_libnuma {
 
 function install_libopus {
 
-	OPUS_LIB=opus-1.1.2.tar.gz
+	      OPUS_LIB=opus-1.5.2.tar.gz
         OPUS_PATH=$(basename ${OPUS_LIB} .tar.gz)
 
         cd ${SOURCE_PREFIX}
